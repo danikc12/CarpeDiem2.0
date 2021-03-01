@@ -1,0 +1,990 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap&subset=latin-ext');
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0 auto;
+	padding: 0 auto;
+}
+body {
+	background-image: url("imagen.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: relative;
+	background-size: cover;
+	font-family: 'Quicksand', sans-serif;
+}
+
+header {
+	z-index: 1;
+	background: rgb(191,0,255);
+	background: linear-gradient(90deg, rgba(191,0,255,0.2137897395286239) 0%, rgba(137,29,215,0.5051062661392682) 35%, rgba(228,91,202,0.27821550983674714) 100%);
+	color: white;
+	border-bottom: rgba(0,0,0,0.2) solid 0.5px;
+	border-radius: 0px 0px 11px 11px;
+	border-bottom: rgba(0,0,0,0.2) solid 0.5px;
+	border-radius: 0px 0px 11px 11px;
+	-moz-border-radius: 0px 0px 11px 11px;
+	-webkit-border-radius: 0px 0px 11px 11px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.error {
+	color: red;
+	font-weight: bold;
+	text-align: center;
+}
+
+.exito {
+	font-weight: bold;
+	text-align: center;
+}
+
+.sticky {
+	position: -webkit-sticky; /* required for Safari */
+	position: sticky;
+	top: 0;
+}
+
+.contenido {
+	width: 100%;
+	padding: 3vw;
+	min-height: calc(85vh - 40px);
+}
+
+/* --- ----- ---*/
+/* --- Texto ---*/
+/* --- ----- ---*/
+
+.fontQuick {
+	font-family: 'Quicksands', sans-serif;
+}
+
+.blackclass {
+	font-weight: bold;
+}
+
+.lighter {
+	font-weight: lighter;
+}
+
+.smalltext {
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: lighter;
+}
+.smalltextTitulos {
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.submenutext {
+	font-size: 12px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.smallercaps {
+	font-variant: small-caps;
+}
+
+.size3 {
+	font-size: 1.3em;
+}
+
+.size5 {
+	font-size: 1.75em;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/* --- ---- ---*/
+/* --- Menu ---*/
+/* --- ---- ---*/
+
+#menu ul {
+	list-style: none;
+	border-radius: 2px;
+}
+
+/* items del menu */
+
+#menu li {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+/* enlaces del menu */
+
+#menu ul a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;
+	padding: 5px;
+	letter-spacing: 1px;
+}
+
+/* items del menu */
+
+#menu ul li {
+	position: relative;
+	float: left;
+}
+
+/* efecto al pasar el ratón por los items del menu */
+
+#menu ul li:hover {
+	background: rgba(174,178,179,0.8);
+}
+/* menu desplegable */
+
+#menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	padding: 0;
+}
+
+/* items del menu desplegable */
+
+#menu ul ul li {
+	float: none;
+}
+
+/* enlaces de los items del menu desplegable */
+
+#menu ul ul a {
+	line-height: 100%;
+	padding: 10px 15px;
+}
+
+/* items del menu desplegable al pasar el ratón */
+
+#menu ul li:hover > ul {
+	display: block;
+	background-color: inherit;
+	color: black;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#menu ul ul li:hover {
+	background-color: grey;
+	color: black;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/* --- -------- ---*/
+/* --- Pagination ---*/
+/* --- -------- ---*/
+
+.pagination {
+	display: inline-block;
+	margin: 5px;
+}
+
+.pagination a {
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	transition: background-color .3s;
+	border: none;
+	font-size: 1em;
+}
+
+.pagination a:hover {
+	background-color: #A9BCF5;
+	color: white;
+}
+
+.pagination .current {
+	font-weight: bold;
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	transition: background-color .3s;
+	border: none;
+	font-size: 1em;
+}
+
+/* --- ---- --- */
+/* --- Grid --- */
+/* --- ---- --- */
+
+[class*="col-"] {
+	float: left;
+	padding-left: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+	float: left;
+	width: 45%;
+	padding: 0px;
+}
+
+/* Right column */
+.rightcolumn {
+	float: left;
+	width: 55%;
+}
+/* Add a card effect for articles */
+.card {
+	background-color: rgba(255,255,255,0.7);
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	padding: 0.5em;
+	display: inline-block;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.right {
+	float: right;
+}
+
+.centered {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.centerText{
+	text-align: center;
+}
+
+.nopadding {
+	padding: 0;
+}
+
+.nomargin {
+	margin: 0;
+}
+
+.padding1 {
+	padding: 5%;
+}
+
+.padding2 {
+	padding: 2em;
+}
+
+.padding-bot {
+	padding-bottom: 5%;
+}
+
+.margin1 {
+	margin: 5%;
+}
+
+.margin-left1 {
+	margin-left: 5%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+	display: flex;
+}
+
+/* Footer */
+.footer {
+	padding: 12px;
+	margin: 0px;
+	text-align: center;
+	color: white;
+	background-color: #333;
+	width: 100%;
+}
+
+.h2 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 6em;
+}
+
+/* --- ------ --- */
+/* --- Fechas --- */
+/* --- ------ --- */
+
+input[type="date"]::-webkit-clear-button {
+	display: none;
+}
+
+/* Removes the spin button */
+input[type="date"]::-webkit-inner-spin-button {
+	display: none;
+}
+
+/* Always display the drop down caret */
+input[type="date"]::-webkit-calendar-picker-indicator {
+	color: #2c3e50;
+}
+
+/* A few custom styles for date inputs */
+input[type="date"] {
+	appearance: none;
+	-webkit-appearance: none;
+	color: #black;
+	font-family: "Helvetica", arial, sans-serif;
+	font-size: 1em;
+	border: 1px solid #b2b2b2;
+	border-radius: 5px;
+	background: white;
+	padding: 5px;
+	display: inline-block !important;
+	visibility: visible !important;
+	width: 100%;
+	float: right;
+}
+
+input[type="date"]:focus {
+	color: #95a5a6;
+	border: 2px solid #2196F3;
+	outline: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+input[type="date"]:hover {
+	background: #ecf0f1;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+	color: rgba(0, 0, 0, 0);
+	opacity: 1;
+	display: block;
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv-oqiq3v3u98jQ5k0m6XsyQTPNwg5sSClIdsWaUwxNZdYChoZww);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 20px;
+	height: 20px;
+	border-width: thin;
+}
+
+/* --- ------ --- */
+/* --- INPUT --- */
+/* --- ------ --- */
+
+input[type="text"]::-webkit-clear-button {
+	display: none;
+}
+
+/* Removes the spin button */
+input[type="text"]::-webkit-inner-spin-button {
+	display: none;
+}
+
+/* Always display the drop down caret */
+input[type="text"]::-webkit-calendar-picker-indicator {
+	color: #2c3e50;
+}
+
+/* A few custom styles for date inputs */
+input[type=text], select, textarea {
+	appearance: none;
+	-webkit-appearance: none;
+	color: #black;
+	font-family: "Helvetica", arial, sans-serif;
+	font-size: 1em;
+	border: 1px solid #b2b2b2;
+	border-radius: 5px;
+	background: white;
+	padding: 8px;
+	display: inline-block !important;
+	visibility: visible !important;
+	width: 100%;
+	float: right;
+}
+
+input[type="text"]:focus {
+	color: #95a5a6;
+	border: 2px solid #C39AF3;
+	outline: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+input[type="text"]:hover {
+	background: #ecf0f1;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+input[type="text"]::-webkit-calendar-picker-indicator {
+	color: rgba(0, 0, 0, 0);
+	opacity: 1;
+	display: block;
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv-oqiq3v3u98jQ5k0m6XsyQTPNwg5sSClIdsWaUwxNZdYChoZww);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 20px;
+	height: 20px;
+}
+
+.beautybox {
+	border: 1px solid black;
+	background: LightGrey;
+	color: black;
+	border-radius: 8px;
+	width: 100%;
+	padding: 8px;
+}
+
+.box {
+	background: linear-gradient(to bottom, white,#A9A9F5,#A9D0F5);
+	border: 2px solid #81DAF5;
+	border-radius: 12px;
+	color: black;
+	padding: 16px 32px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* --- ------- --- */
+/* --- Botones --- */
+/* --- ------- --- */
+
+.button {
+	background: linear-gradient(to bottom, white,#A9A9F5,#A9D0F5);
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	font-family: inherit;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.button4 {
+	background-image: linear-gradient(to right, white,#A9A9F5 50%,#A9D0F5 100%);
+	color: black;
+	border: 2px solid #81DAF5;
+	width: 100%;
+	font-size: 1.5em;
+	background-size: 200% auto;
+	border-radius: 5px;
+}
+
+.button4:hover {
+	transition: 0.5s;
+	background-position: right center;
+	color: white;
+}
+
+.button5 {
+	background: linear-gradient(to bottom, white,#A9A9F5,#A9D0F5);
+	color: black;
+	border: 2px solid #81DAF5;
+}
+
+.button5:hover {
+	background-color: #555555;
+	color: white;
+}
+
+.button2 {
+	background: linear-gradient(to bottom, white,#A9A9F5,#A9D0F5);
+	border: none;
+	color: black;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 12px;
+}
+
+.button2:hover {
+	background-color: #A9BCF5;
+	color: white;
+}
+
+.button3 {
+	background: linear-gradient(to bottom, white,#A9A9F5,#A9D0F5);
+	font-family: AppleGothic;
+	border: none;
+	color: black;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-top: 15%;
+	cursor: pointer;
+	border-radius: 12px;
+}
+
+.button3:hover {
+	background-color: #A0E0E7;
+	color: white;
+}
+
+.button6 {
+	background-color: white;
+	border: 2px solid grey;
+	border-radius: 5px;
+}
+
+.button6:hover {
+	background-color: grey;
+	color: white;
+}
+
+/* --- ------ --- */
+/* --- Switch --- */
+/* --- ------ --- */
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	margin: 10px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .slider {
+	background-color: #2196F3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/* --- ------ --- */
+/* --- Tables --- */
+/* --- ------ --- */
+
+.table {
+	display: table;
+	text-align: center;
+	width: 100%;
+	margin: 10% auto 0;
+	border-collapse: separate;
+	font-weight: 400;
+}
+
+.table_row {
+	display: table-row;
+}
+
+.theader {
+	display: table-row;
+}
+
+.table_header {
+	display: table-cell;
+	border-bottom: 1px solid grey;
+	border-top: 1px solid grey;
+	background: #bdbdbd;
+	opacity: 0.9;
+	color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: 700;
+}
+
+.table_header:first-child {
+	border-left: 1px solid grey;
+	border-top-left-radius: 5px;
+}
+
+.table_header:last-child {
+	border-right: 1px solid grey;
+	border-top-right-radius: 5px;
+}
+
+.table_small {
+	display: table-cell;
+}
+
+.table_row > .table_small > .table_cell:nth-child(odd) {
+	display: none;
+	background: black;
+	padding-top: 10px;
+	color: black;
+	padding-bottom: 10px;
+}
+
+.table_row > .table_small > .table_cell {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	color: black;
+	border-bottom: 1px solid grey;
+}
+
+.table_row > .table_small:first-child > .table_cell {
+	border-left: 1px solid grey;
+}
+
+.table_row > .table_small:last-child > .table_cell {
+	border-right: 1px solid grey;
+}
+
+.table_row:last-child > .table_small:last-child > .table_cell:last-child {
+	border-bottom-right-radius: 5px;
+}
+
+.table_row:last-child > .table_small:first-child > .table_cell:last-child {
+	border-bottom-left-radius: 5px;
+}
+
+.table_row:nth-child(2n+3) {
+	background: white;
+}
+
+/* --- ----------- --- */
+/* --- Collapsible --- */
+/* --- ----------- --- */
+
+/*
+ CSS for the main interaction
+ */
+.accordion > input[type="checkbox"] {
+	position: relative;
+	left: -100vw;
+}
+
+.accordion .content {
+	overflow-y: hidden;
+	height: 0;
+	transition: height 0.5s ease-out;
+}
+
+.accordion > input[type="checkbox"]:checked ~
+.content {
+	height: auto;
+	overflow: visible;
+}
+
+.accordion #handle1 {
+	display: block;
+}
+
+/*
+ Styling
+ */
+
+.accordion {
+	margin-bottom: 1em;
+}
+
+.accordion > input[type="checkbox"]:checked ~
+.content {
+	padding: 15px;
+	border-top: 0;
+	margin: 0 auto;
+}
+
+.accordion .handle {
+	margin: 0;
+	font-size: 1.125em;
+	line-height: 1.2em;
+}
+
+.accordion #handle1 {
+	color: #333;
+	cursor: pointer;
+	font-weight: normal;
+	padding: 15px;
+	background: LightGrey;
+	border-radius: 8px;
+}
+
+.accordion #handle1:hover, .accordion #handle1:focus {
+	background: grey;
+	color: white;
+}
+
+.accordion .handle #handle1:before {
+	content: "\f054";
+	display: inline-block;
+	margin-right: 10px;
+	font-size: .58em;
+	line-height: 1.556em;
+	vertical-align: middle;
+}
+
+.accordion > input[type="checkbox"]:checked ~
+.handle #handle1:before {
+	content: "\f078";
+}
+
+/* --- ----- ------- --- */
+/* --- Media Queries --- */
+/* --- ----- ------- --- */
+
+/* XS (smartphones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+	.html,body {
+		overflow-x: hidden;
+	}
+
+	.contenido {
+		padding: 1vw;
+	}
+
+	.leftcolumn, .rightcolumn {
+		width: 100%;
+		padding: 0;
+	}
+
+
+	.table_header {
+		display: table-cell;
+		border-bottom: 1px solid grey;
+		border-top: 1px solid grey;
+		background: #bdbdbd;
+		opacity: 0.9;
+		color: black;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		font-weight: 500;
+}
+
+	.padding-xs {
+		padding: 0;
+	}
+
+	.col-xs-1 {
+		width: 8.33%;
+	}
+	.col-xs-2 {
+		width: 16.66%;
+	}
+	.col-xs-3 {
+		width: 25%;
+	}
+	.col-xs-4 {
+		width: 33.33%;
+	}
+	.col-xs-5 {
+		width: 41.66%;
+	}
+	.col-xs-6 {
+		width: 50%;
+	}
+	.col-xs-7 {
+		width: 58.33%;
+	}
+	.col-xs-8 {
+		width: 66.66%;
+	}
+	.col-xs-9 {
+		width: 75%;
+	}
+	.col-xs-10 {
+		width: 83.33%;
+	}
+	.col-xs-11 {
+		width: 91.66%;
+	}
+	.col-xs-12 {
+		width: 100%;
+	}
+
+	.centered-xs {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	#menu ul {
+		margin: 0;
+		padding: 0;
+	}
+
+}
+
+/* S (portrait tablets and large phones, 600px and up to 850px) */
+@media only screen and (min-width: 600px) and (max-width: 850px) {
+	.col-s-1 {
+		width: 8.33%;
+	}
+	.col-s-2 {
+		width: 16.66%;
+	}
+	.col-s-3 {
+		width: 25%;
+	}
+	.col-s-4 {
+		width: 33.33%;
+	}
+	.col-s-5 {
+		width: 41.66%;
+	}
+	.col-s-6 {
+		width: 50%;
+	}
+	.col-s-7 {
+		width: 58.33%;
+	}
+	.col-s-8 {
+		width: 66.66%;
+	}
+	.col-s-9 {
+		width: 75%;
+	}
+	.col-s-10 {
+		width: 83.33%;
+	}
+	.col-s-11 {
+		width: 91.66%;
+	}
+	.col-s-12 {
+		width: 100%;
+	}
+
+	.padding-s {
+		padding: 0;
+	}
+
+	.centered-s {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#menu ul {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+/* M (landscape tablets, 850px and up) */
+@media only screen and (min-width: 850px) {
+	.col-1 {
+		width: 8.33%;
+	}
+	.col-2 {
+		width: 16.66%;
+	}
+	.col-3 {
+		width: 25%;
+	}
+	.col-4 {
+		width: 33.33%;
+	}
+	.col-5 {
+		width: 41.66%;
+	}
+	.col-6 {
+		width: 50%;
+	}
+	.col-7 {
+		width: 58.33%;
+	}
+	.col-8 {
+		width: 66.66%;
+	}
+	.col-9 {
+		width: 75%;
+	}
+	.col-10 {
+		width: 83.33%;
+	}
+	.col-11 {
+		width: 91.66%;
+	}
+	.col-12 {
+		width: 100%;
+	}
+
+}
+
+/* XL (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	.contenido {
+		width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}

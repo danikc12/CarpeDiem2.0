@@ -1,0 +1,336 @@
+
+  table {
+    position: relative;
+    width:90%;
+    height:20%;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+  table#t01 tr:nth-child(even) {
+    background-color: #eee;
+  }
+  table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+  }
+  table#t01 th {
+    background-color: black;
+    color: white;
+  }
+  table tr:hover {
+  background-color: #333;
+  cursor: pointer;
+}
+  </style>
+  <style>
+
+
+    .big{
+    	border: 1px solid black;
+      background:#fff;
+      margin-top: 10px;
+      width: 90%;
+      height: 100%;
+    }
+    .medium{
+    	border: 3px solid white;
+      height: 500px;
+    }
+    .small{
+    	border: 3px solid white;
+      display: block;
+      position: relative;
+      }
+    .anadir{
+    	border: 3px solid white;
+      display: block;
+      position: relative;
+
+    }
+     .Ir{
+    	border: 3px solid white;
+      display: block;
+      position: relative;
+    }
+
+    .buscador{
+    	border: 3px solid white;
+      position: absolute;
+      top: 25px;
+      right: 0;
+      display: inline-block;
+
+    }
+
+
+
+
+
+  #cal {
+      -moz-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25);
+      -webkit-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25);
+      margin:50px auto;
+      font: 13px/1.5 "Helvetica Neue", Helvatica, Arial, san-serif;
+      display:table;
+  }
+  #cal .header {
+      cursor:default;
+      background: #fff;
+      background: -moz-linear-gradient(top, #ff99cc, #cd310d);
+      background: -webkit-gradient(linear, left top, left bottom, from(#ccffff), to(#ccffff));
+      height: 34px;
+      position: relative;
+      color:#000;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      font-weight:bold;
+      text-shadow:0px -1px 0 #87260C;
+      text-transform: uppercase;
+  }
+  #cal .header span {
+      display:inline-block;
+      line-height:34px;
+  }
+  #cal .header .hook {
+      width: 9px;
+      height: 28px;
+      position: absolute;
+      bottom:60%;
+      border-radius:10px;
+      -moz-border-radius:10px;
+      -webkit-border-radius:10px;
+      background:#ececec;
+      background: -moz-linear-gradient(right top, #fff, #827e7d);
+      background: -webkit-gradient(linear, right top, right bottom, from(#fff), to(#827e7d));
+      box-shadow:0px -1px 2px rgba(0, 0, 0, 0.65 );
+      -moz-box-shadow:0px -1px 2px rgba(0, 0, 0, 0.65 );
+      -webkit-box-shadow:0px -1px 2px rgba(0, 0, 0, 0.65 );
+  }
+  .right.hook {
+      right:15%;
+  }
+  .left.hook {
+      left: 15%;
+  }
+  #cal .header .button {
+      width:24px;
+      text-align:center;
+      position:absolute;
+  }
+  #cal .header .left.button {
+      left:0;
+      -webkit-border-top-left-radius: 5px;
+      -moz-border-radius-topleft: 5px;
+      border-top-left-radius: 5px;
+      border-right:1px solid #ccffff;
+  }
+  #cal .header .right.button {
+      right:0;
+      top:0;
+      border-left:1px solid #ccffff;
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-radius-topright: 5px;
+      border-top-right-radius: 5px;
+  }
+  #cal .header .button:hover {
+      background: -moz-linear-gradient(top, #99ffcc, #99ffcc);
+      background: -webkit-gradient(linear, left top, left bottom, from(#8c8c8c), to(#8c8c8c));
+  }
+  #cal .header .month-year {
+      letter-spacing: 1px;
+      width: 100%;
+      text-align: center;
+  }
+  #cal table {
+      background:#fff;
+      border-collapse:collapse;
+  }
+  #cal td {
+      color:#2b2b2b;
+      width:30px;
+      height:30px;
+      line-height:30px;
+      text-align:center;
+      border:1px solid #e6e6e6;
+      cursor:default;
+  }
+  #cal #days td {
+      height:26px;
+      line-height: 26px;
+      text-transform:uppercase;
+      font-size:90%;
+      color:#8c8c8c;
+  }
+  #cal #days td:not(:last-child) {
+      border-right:1px solid #fff;
+  }
+  #cal #cal-frame td.today {
+      background:#8c8c8c;
+      color:#8c8c8c;
+      box-shadow:1px 1px 0px #a6a6a6 inset;
+      -moz-box-shadow:1px 1px 0px #a6a6a6 inset;
+      -webkit-box-shadow:1px 1px 0px #a6a6a6 inset;
+  }
+  #cal #cal-frame td:not(.nil):hover {
+      color:#e6e6e6;
+      text-shadow: #6C1A07 0px -1px;
+      background:#a6a6a6;
+      background: -moz-linear-gradient(top, #ff99cc, #ff99cc);
+      background: -webkit-gradient(linear, left top, left bottom, from(#8c8c8c), to (#8c8c8c));
+      -moz-box-shadow:0px 0px 0px;
+      -webkit-box-shadow:0px 0px 0px;
+  }
+  #cal #cal-frame td span {
+      font-size:80%;
+      position:relative;
+  }
+  #cal #cal-frame td span:first-child {
+      bottom:5px;
+  }
+  #cal #cal-frame td span:last-child {
+      top:5px;
+  }
+  #cal #cal-frame table.curr {
+      float:left;
+  }
+  #cal #cal-frame table.temp {
+      position:absolute;
+  }
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat;
+  padding: 3vw;
+  /* Imagen de fondo a partir de URL */
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/World_map_%28blue_dots%29.svg/2100px-World_map_%28blue_dots%29.svg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;	/* Para que la imagen se ajusta al tamano y se ve completamente */
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: left;
+  background: ;
+  color: #f2f2f2;
+
+  border-radius: 5px;
+  margin-top: -180px;
+
+}
+
+.header h1 {
+  font-size: 8vw;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  margin-top: -200px;
+
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 60%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 40%;
+  padding-left: 20px;
+  margin-top:10px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  border: 1px solid black;
+  padding: 80px;
+  margin-top: 10px;
+  display: block;
+}
+.calendar {
+  background-color: ;
+  border: 1px solid white ;
+  padding:80px ;
+  margin-top: 70px;
+  display: block;
+  margin-left: -50px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}

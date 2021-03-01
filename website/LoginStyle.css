@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+  
+/* Todas las propiedades de la caja (contenido, padding y margen) se incluyen en las propiedades width(anchura) y height(altura) */    
+* {
+  box-sizing: border-box;
+}
+  
+  
+.error{
+	color: red;
+	font-weight: bold;
+	text-align: center;
+}
+
+  
+/* Grid
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+  
+  
+
+/* Se aplica a toda la pagina */  
+body {
+  margin: 0;
+  font-size: 17px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+ 
+
+.bigbox{
+    display: block;    
+    min-width: 100%;
+    display: flex;
+ 	flex-direction: column;
+  	justify-content: center;
+  	margin-top: 15%;
+  }
+  
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+  
+
+	
+  
+/* Estilo de los campos rellenables */  
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 3vw;
+  margin: 1vw 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+    font-size: 3vw;
+    
+}
+
+
+
+
+/* Estilo de los botones */
+.buttonLogin {
+  background: linear-gradient(to bottom, #A688F1,
+  #A9A9F5,#A9D0F5);
+  text-align: center;
+  color: white;
+  padding: 3vw;
+  margin: 1vw 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  display:block;
+
+
+}
+
+.buttonLogin:hover {
+  background: linear-gradient(to bottom,white,#A9D0F5,#A9A9F5, #A688F1
+  );
+}
+
+.button {
+  background: linear-gradient(to bottom, white,#A9A9F5,#A9D0F5);
+  border: none;
+  border-radius: 5px;	
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;  
+  display: inline-block;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+  .button4 {
+  background-image: linear-gradient(to right, white,#A9A9F5 50%,#A9D0F5 100%);
+  color: black;    
+  width: 100%;
+  background-size: 200% auto;  
+  }
+
+  .button4:hover {
+  transition: 0.5s;  
+  background-position: right center;
+  color: white;
+}
+
+
+
+.container {
+  height: 400px;
+  font-size: 6vw;
+  padding: 3vw;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+    
+  .bigbox{
+      height:100px;
+      min-height:30%;
+  }
+  .container {
+  margin: auto;  
+  padding: 2vw;
+  }
+    
+  button {
+  padding: 2vw; 
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+   
+    
+  input[type=text], input[type=password] {
+  padding: 2vw;
+  margin: 1vw 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 3vw;
+    
+  }    
+  
+  .container {
+  margin: auto;
+  padding: 2vw;
+  height: auto;      
+  width:70%;  
+  font-size: 4vw;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  button {
+  padding: 2vw;
+  margin: 1vw 0;  
+  }  
+    
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+    
+  .bigbox{      
+    min-height:100%;      
+  }
+  
+  input[type=text], input[type=password] {
+  padding: 2vw;
+  margin: 1vw 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 2vw;
+    
+  }    
+  
+  .container {
+  margin: auto;
+  padding: 2vw;
+  height: auto;      
+  width:50%;  
+  font-size: 3vw;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  button {
+  padding: 1.5vw;
+  margin: 1vw 0;  
+  }  
+
+  
+}
+
+@media only screen and (min-width: 1080px) {    
+
+  .container {
+  margin: auto;
+  padding: 1vw;
+  height: auto;
+  width:30%;  
+  font-size: 1.25vw;
+  background-color: rgba(255,255,255,0.7);  
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 1vw;
+  margin: 1vw 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1vw;
+    
+}    
+  button {
+  padding: 1vw;
+  margin: 1vw 0;  
+}
+    
+    
+}
