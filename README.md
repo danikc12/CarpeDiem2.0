@@ -9,8 +9,8 @@ Software and versions used:
 - Aptana Studio 3 (build 3.6.1.201410201044)
 
 
-Database username:  CarpeDiem
-password:           demo
-
-User for testing:   demo@demo.com
-Password:           0000
+Database username:  CarpeDiem  
+password:           demo  
+  
+User for testing:   demo@demo.com  
+Password:           0000  
