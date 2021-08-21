@@ -1,5 +1,5 @@
 # CarpeDiem2.0
-Educational project. Together with two companions, we learnt how to build a database using SQL and a website using HTML, CSS and PHP.
+Educational project. Together with two friends, we learnt how to build a database using SQL and a website using HTML, CSS and PHP.
 
 The project is a basic webpage to manage a database of clients and their travel information.
 
